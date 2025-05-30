@@ -1,5 +1,5 @@
 import express from 'express'
-import * as db from './database.js'
+import * as db from './util/database.js'
 
 const app = express()
 app.use(express.json())

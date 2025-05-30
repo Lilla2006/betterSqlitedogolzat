@@ -1,5 +1,5 @@
 import Database from 'better-sqlite3'
-const db = new Database('./database.sqlite')
+const db = new Database('./data/database.sqlite')
 db.prepare(`CREATE TABLE IF NOT EXISTS notes (id INTEGER PRIMARY KEY, title STRING, content STRING)`).run()
 
 export const getNotes = () => db.prepare('SELECT * FROM notes').all()

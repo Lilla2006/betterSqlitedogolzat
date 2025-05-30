@@ -13,7 +13,7 @@ app.get('/notes', (req, res) => {
 app.get('/notes/:id', (req, res) => {
     const note = db.getNote(req.params.id)
     if(!note) {
-        return res.status(404).json({message: 'User not found'})
+        return res.status(404).json({message: 'Note not found'})
     }
     res.status(200).json(note)
 })
